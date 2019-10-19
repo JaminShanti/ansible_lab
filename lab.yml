@@ -1,0 +1,3 @@
+---
+- import_playbook: win_lab.yml
+- import_playbook: lab_tower.yml

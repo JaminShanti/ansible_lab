@@ -1,0 +1,4 @@
+---
+- hosts: win_lab
+  roles:
+    - win_lab

@@ -1,0 +1,11 @@
+---
+- name:   Create swap space and Make Swap
+  shell:  |
+    dd if=/dev/zero of=/extraswap bs=1M count=512
+    mkswap /extraswap
+    swapon -a
+    sysctl vm.swappiness=10
+  when:   ansible_swaptotal_mb < 1
+
+- name:   Add to fstab
+  action: lineinfile dest=/etc/fstab regexp="extraswap" line="/extraswap none swap sw 0 0" state=present

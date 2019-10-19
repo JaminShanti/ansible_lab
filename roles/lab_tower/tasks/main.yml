@@ -1,0 +1,4 @@
+---
+# Main task list for Windows Lab Instances
+- name: Import tasks for swap file setup
+  import_tasks: 01-swap-file.yml

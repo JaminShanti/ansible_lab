@@ -1,0 +1,13 @@
+---
+# Main task list for Windows Lab Instances
+- name: Add Host Record for Ansible Tower
+  win_hosts:
+    state: present
+    canonical_name: ansible
+    ip_address: 192.168.50.105
+
+- name: Add Host Record for Lab1
+  win_hosts:
+    state: present
+    canonical_name: lab1
+    ip_address: 192.168.50.101

@@ -1,0 +1,5 @@
+---
+- hosts: lab_tower
+  connection: local
+  roles:
+    - lab_tower
